@@ -1,0 +1,38 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 - Ohmyfood - OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/scss:css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/openclassrooms23/projet-3-ohmyfood.git"
+  },
+  "keywords": [
+    "P3",
+    "ohmyfood",
+    "OpenClassrooms"
+  ],
+  "author": "Anthony Rabot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/openclassrooms23/projet-3-ohmyfood/issues"
+  },
+  "homepage": "https://gitlab.com/openclassrooms23/projet-3-ohmyfood#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.55.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not IE 11"
+  ]
+}
