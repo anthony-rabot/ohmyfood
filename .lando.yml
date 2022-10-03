@@ -1,0 +1,17 @@
+name: p3-openclassrooms
+config:
+  webroot: .
+services:
+  node:
+    type: node:14
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node
+  sass:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
