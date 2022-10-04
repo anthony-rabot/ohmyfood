@@ -11,10 +11,16 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 1;
+    opacity: 0;
 
-    //&:hover {
-    //  opacity: 1;
-    //}
+    &:hover,
+    &:active,
+    &:focus {
+      animation-name: heart;
+      animation-duration: 300ms;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
   }
 }

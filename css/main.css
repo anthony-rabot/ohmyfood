@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+@keyframes heart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -209,7 +217,13 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
+  opacity: 0;
+}
+.heart-icon--full:hover, .heart-icon--full:active, .heart-icon--full:focus {
+  animation-name: heart;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=main.css.map */
