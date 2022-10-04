@@ -1,8 +1,9 @@
+// Home location
 .location {
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 1rem;
+  padding: $global-spacing;
   background-color: map-get($ohmyfood-theme, medium-gray);
 
   &__icon {
@@ -14,13 +15,13 @@
     font-weight: 500;
   }
 }
-
+// Home Hero
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: calc($global-spacing *2);
   background-color: map-get($ohmyfood-theme, light-gray);
 
   &__title {
@@ -30,5 +31,66 @@
 
   &__content {
     font-weight: 300;
+  }
+}
+
+// How to
+.howto-wrapper {
+  padding: $global-spacing;
+}
+
+.howto {
+  display: flex;
+  flex-direction: column;
+  gap: calc($global-spacing * 1.5);
+  padding: 0;
+  counter-reset: howto;
+
+  &__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: $global-spacing;
+    padding: calc($global-spacing * .5);
+    counter-increment: howto;
+    box-shadow: 2px 5px 1rem rgba(0, 0, 0, .15);
+    border-radius: $border-radius;
+    background-color: map-get($ohmyfood-theme, light-gray);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: lighten(map-get($ohmyfood-theme, primary), 30);
+
+      i {
+        color: map-get($ohmyfood-theme, primary);
+      }
+    }
+
+    &::before {
+      content: counter(howto);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -1rem;
+      width: calc($global-spacing * 1.5);
+      height: calc($global-spacing * 1.5);
+      background-color: map-get($ohmyfood-theme, primary);
+      color: $white;
+      border-radius: 50%;
+      font-size: .8rem;
+    }
+
+    &-icon {
+      font-size: 1.2rem;
+      color: lighten(map-get($ohmyfood-theme, dark-gray), 30%);
+      padding: 0 calc($global-spacing * 1.5);
+    }
+
+    &-content {
+      margin: calc($global-spacing * 1.2) 0;
+    }
   }
 }
