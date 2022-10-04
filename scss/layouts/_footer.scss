@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: $global-spacing;
+  background-color: map-get($ohmyfood-theme, dark-gray);
+
+  &__title {
+    font-family: $title-font-family;
+    color: $white;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      color: $white;
+      text-decoration: none;
+      margin: calc($global-spacing / 3) 0;
+
+      i {
+        margin-right: calc($global-spacing / 2);
+      }
+    }
+  }
+}

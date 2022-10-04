@@ -158,7 +158,8 @@
           }
         }
         &-heart {
-
+          font-size: 1.8rem;
+          color: lighten(map-get($ohmyfood-theme, dark-gray), 30%);
         }
       }
     }
