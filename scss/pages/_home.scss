@@ -36,7 +36,7 @@
 
 // How to
 .howto-wrapper {
-  padding: $global-spacing;
+  padding: calc($global-spacing *2) $global-spacing;
 }
 
 .howto {
@@ -93,6 +93,50 @@
 
     &-content {
       margin: calc($global-spacing * 1.2) 0;
+    }
+  }
+}
+
+// Restaurants
+.restaurants-wrapper {
+  padding: calc($global-spacing *2) $global-spacing;
+  background-color: map-get($ohmyfood-theme, light-gray);
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: $global-spacing;
+
+
+  &__item {
+    text-decoration: none;
+    color: $black;
+
+    &-card {
+      &-body {
+        background-color: $white;
+        border-radius: 0 0 $border-radius $border-radius;
+        display: flex;
+        padding: $global-spacing;
+
+        &-text {
+          flex: 1;
+
+          h3 {
+            margin-top: 0;
+            margin-bottom: calc($global-spacing *.5);
+          }
+
+          p {
+            margin: 0;
+            font-weight: 300;
+          }
+        }
+        &-heart {
+
+        }
+      }
     }
   }
 }
