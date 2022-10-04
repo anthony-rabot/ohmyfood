@@ -119,6 +119,13 @@
       flex-direction: column;
       border-radius: $border-radius;
       box-shadow: 2px 5px 1rem rgba(0, 0, 0, .15);
+      transition: box-shadow ease-in-out 150ms;
+
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: 2px 5px 1rem rgba(0, 0, 0, .3);
+      }
 
       &-img {
         height: $card-height;

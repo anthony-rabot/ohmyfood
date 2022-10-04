@@ -161,6 +161,10 @@ h1 {
   flex-direction: column;
   border-radius: 1.2rem;
   box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.15);
+  transition: box-shadow ease-in-out 150ms;
+}
+.restaurants__item-card:hover, .restaurants__item-card:active, .restaurants__item-card:focus {
+  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.3);
 }
 .restaurants__item-card-img {
   height: 180px;
