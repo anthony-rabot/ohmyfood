@@ -57,6 +57,7 @@
     box-shadow: 2px 5px 1rem rgba(0, 0, 0, .15);
     border-radius: $border-radius;
     background-color: map-get($ohmyfood-theme, light-gray);
+    transition: background-color ease-in-out 200ms;
 
     &:hover,
     &:focus,
@@ -87,6 +88,7 @@
       font-size: 1.2rem;
       color: lighten(map-get($ohmyfood-theme, dark-gray), 30%);
       padding: 0 calc($global-spacing * 1.5);
+      transition: color ease-in-out 200ms;
     }
 
     &-content {
