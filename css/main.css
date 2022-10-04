@@ -1,5 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", Helvetica Neue, Helvetica, Arial, cursive;
+}
+
+.header {
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 200;
+}
+.header__title {
+  text-align: center;
+  margin: 0;
+}
+.header__geolocalisation {
+  background-color: #eaeaea;
+}
+
+.location {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #eaeaea;
+}
+.location__icon {
+  margin-right: 1.5rem;
+}
+.location__city {
+  margin: 0;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
