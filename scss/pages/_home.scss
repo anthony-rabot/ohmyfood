@@ -159,7 +159,13 @@
         }
         &-heart {
           font-size: 1.8rem;
+          width: 1.8rem;
           color: lighten(map-get($ohmyfood-theme, dark-gray), 30%);
+          position: relative;
+
+          i {
+            position: absolute;
+          }
         }
       }
     }

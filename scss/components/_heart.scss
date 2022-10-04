@@ -1,0 +1,19 @@
+.heart-icon {
+  width: 1.8rem;
+
+  &--border {
+    z-index: 50;
+  }
+
+  &--full {
+    z-index: 80;
+    background: linear-gradient(map-get($ohmyfood-theme, secondary), map-get($ohmyfood-theme, primary));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+
+    //&:hover {
+    //  opacity: 1;
+    //}
+  }
+}

@@ -189,7 +189,26 @@ h1 {
 }
 .restaurants__item-card-body-heart {
   font-size: 1.8rem;
+  width: 1.8rem;
   color: #828282;
+  position: relative;
+}
+.restaurants__item-card-body-heart i {
+  position: absolute;
+}
+
+.heart-icon {
+  width: 1.8rem;
+}
+.heart-icon--border {
+  z-index: 50;
+}
+.heart-icon--full {
+  z-index: 80;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
