@@ -124,6 +124,29 @@ h1 {
   text-decoration: none;
   color: #000;
 }
+.restaurants__item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.2rem;
+  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.15);
+}
+.restaurants__item-card-img {
+  height: 180px;
+  border-radius: 1.2rem 1.2rem 0 0;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.restaurants__item-card-label {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: #164d3f;
+  padding: 0.3333333333rem;
+  border-radius: 0.3rem;
+  background-color: #99E2D0;
+}
 .restaurants__item-card-body {
   background-color: #fff;
   border-radius: 0 0 1.2rem 1.2rem;

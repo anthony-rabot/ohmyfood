@@ -114,6 +114,30 @@
     color: $black;
 
     &-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-radius: $border-radius;
+      box-shadow: 2px 5px 1rem rgba(0, 0, 0, .15);
+
+      &-img {
+        height: $card-height;
+        border-radius: $border-radius $border-radius 0 0;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+
+      &-label {
+        position: absolute;
+        top: $global-spacing;
+        right: $global-spacing;
+        font-size: .8rem;
+        color: darken(map-get($ohmyfood-theme, tertiary), 55);
+        padding: calc($global-spacing / 3);
+        border-radius: calc($border-radius / 4);
+        background-color: map-get($ohmyfood-theme, tertiary);
+      }
+
       &-body {
         background-color: $white;
         border-radius: 0 0 $border-radius $border-radius;
