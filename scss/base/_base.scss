@@ -3,3 +3,6 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+body {
+  font-family: $body-font-family;
+}

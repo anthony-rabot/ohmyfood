@@ -1,0 +1,16 @@
+.location {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: map-get($ohmyfood-theme, medium-gray);
+
+  &__icon {
+    margin-right: 1.5rem;
+  }
+
+  &__city {
+    margin: 0;
+    font-weight: 500;
+  }
+}

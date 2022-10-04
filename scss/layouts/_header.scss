@@ -1,0 +1,15 @@
+.header {
+  padding: 1rem;
+  box-shadow: 0 0 .5rem rgba(0,0,0,.5);
+  position: relative;
+  z-index: 200;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__geolocalisation {
+    background-color: map-get($ohmyfood-theme, medium-gray);
+  }
+}
