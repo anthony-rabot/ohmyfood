@@ -32,6 +32,14 @@
   &__content {
     font-weight: 300;
   }
+
+  &__btn {
+    padding: $global-spacing;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    @include btn-animation(map-get($ohmyfood-theme, secondary), map-get($ohmyfood-theme, primary), 250ms);
+  }
 }
 
 // How to

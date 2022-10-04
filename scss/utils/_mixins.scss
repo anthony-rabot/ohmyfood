@@ -1,0 +1,26 @@
+@mixin btn-animation( $start-color, $end-color, $transition-time ){
+  border-radius: calc($border-radius * 2);
+  background-size: 100%;
+  background-image: linear-gradient($start-color, $end-color);
+  position: relative;
+  z-index: 100;
+  &:before {
+    border-radius: calc($border-radius * 2);
+    background-image: linear-gradient(lighten($start-color, 5), lighten($end-color, 5));
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity $transition-time;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
