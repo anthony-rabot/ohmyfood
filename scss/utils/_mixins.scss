@@ -18,7 +18,9 @@
     z-index: -100;
     transition: opacity $transition-time;
   }
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     &:before {
       opacity: 1;
     }
