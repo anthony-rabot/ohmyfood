@@ -7,14 +7,6 @@
     opacity: 1;
   }
 }
-@keyframes explore-btn {
-  from {
-    background: linear-gradient(#FF79DA, #9356DC);
-  }
-  to {
-    background: linear-gradient(#ff93e1, #a16be0);
-  }
-}
 *, *:before, *:after {
   box-sizing: border-box;
 }
