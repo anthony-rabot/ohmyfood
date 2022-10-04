@@ -1,0 +1,17 @@
+.main-content {
+
+  &--grey {
+    background-color: map-get($ohmyfood-theme, light-gray);
+    border-radius: calc($border-radius * 2) calc($border-radius * 2) 0 0;
+  }
+
+  &--over-image {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.carte-restaurant {
+  padding: $global-spacing;
+}

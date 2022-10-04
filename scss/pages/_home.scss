@@ -15,33 +15,6 @@
     font-weight: 500;
   }
 }
-// Home Hero
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: calc($global-spacing *2);
-  background-color: map-get($ohmyfood-theme, light-gray);
-
-  &__title {
-    margin: 0;
-    font-weight: 700;
-  }
-
-  &__content {
-    font-weight: 300;
-  }
-
-  &__btn {
-    padding: $global-spacing;
-    border: none;
-    color: $white;
-    cursor: pointer;
-    @include btn-animation(map-get($ohmyfood-theme, secondary), map-get($ohmyfood-theme, primary), 250ms);
-    @include shadow;
-  }
-}
 
 // How to
 .howto-wrapper {
@@ -168,14 +141,7 @@
           }
         }
         &-heart {
-          font-size: 1.8rem;
-          width: 1.8rem;
-          color: lighten(map-get($ohmyfood-theme, dark-gray), 30%);
-          position: relative;
-
-          i {
-            position: absolute;
-          }
+          @include heart;
         }
       }
     }

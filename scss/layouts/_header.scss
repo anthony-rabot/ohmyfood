@@ -1,15 +1,35 @@
 .header {
+  text-align: center;
   padding: $global-spacing;
   box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
   position: relative;
   z-index: 200;
 
   &__title {
-    text-align: center;
     margin: 0;
+  }
+
+  &__logo {
+    max-width: 180px;
   }
 
   &__geolocalisation {
     background-color: map-get($ohmyfood-theme, medium-gray);
+  }
+}
+
+// Titre des pages des restaurants
+.page-title {
+  display: flex;
+  align-items: center;
+  padding: $global-spacing;
+
+  &__title {
+    flex: 1;
+    margin: calc($global-spacing / 2) 0;
+  }
+
+  &__heart {
+    @include heart;
   }
 }
