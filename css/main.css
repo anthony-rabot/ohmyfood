@@ -245,6 +245,14 @@ h1 {
   padding: 2rem 1rem;
   background-color: #f6f6f6;
 }
+@media (min-width: 1200px) {
+  .restaurants-wrapper {
+    padding: 2rem 0;
+  }
+  .restaurants-wrapper h2 {
+    padding: 0 1rem;
+  }
+}
 
 .restaurants {
   display: flex;
@@ -255,6 +263,11 @@ h1 {
   .restaurants {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1200px) {
+  .restaurants {
+    padding: 0 1rem;
   }
 }
 .restaurants__item {

@@ -87,6 +87,14 @@
 .restaurants-wrapper {
   padding: calc($global-spacing *2) $global-spacing;
   background-color: map-get($ohmyfood-theme, light-gray);
+
+  @include is('desktop') {
+    padding: calc($global-spacing *2) 0;
+
+    h2 {
+      padding: 0 calc($global-spacing);
+    }
+  }
 }
 
 .restaurants {
@@ -97,6 +105,10 @@
   @include is('tablette') {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include is('desktop') {
+    padding: 0 calc($global-spacing);
   }
 
 
