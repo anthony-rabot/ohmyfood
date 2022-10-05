@@ -28,6 +28,10 @@
   padding: 0;
   counter-reset: howto;
 
+  @include is('tablette') {
+    flex-direction: row;
+  }
+
   &__item {
     flex: 1;
     display: flex;
@@ -90,10 +94,23 @@
   flex-direction: column;
   gap: $global-spacing;
 
+  @include is('tablette') {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
 
   &__item {
     text-decoration: none;
     color: $black;
+
+    @include is('tablette') {
+      flex: 1 0 40%;
+    }
+
+    @include is('desktop') {
+      flex: 1;
+    }
 
     &-card {
       position: relative;

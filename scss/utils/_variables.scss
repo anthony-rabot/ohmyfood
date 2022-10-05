@@ -23,3 +23,9 @@ $border-radius: 1.2rem;
 
 // Cards
 $card-height: 180px;
+
+// Breakpoints
+$breakpoints: (
+  'tablette': 992px,
+  'desktop':  1200px
+) !default;

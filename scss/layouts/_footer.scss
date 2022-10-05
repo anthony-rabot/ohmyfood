@@ -1,8 +1,17 @@
+.footer-wrapper {
+  background-color: map-get($ohmyfood-theme, dark-gray);
+}
+
 .footer {
   display: flex;
   flex-direction: column;
   padding: $global-spacing;
-  background-color: map-get($ohmyfood-theme, dark-gray);
+
+  @include is('tablette') {
+    flex-direction: row;
+    align-items: center;
+    gap: $global-spacing;
+  }
 
   &__title {
     font-family: $title-font-family;
@@ -12,6 +21,12 @@
   &__nav {
     display: flex;
     flex-direction: column;
+
+    @include is('tablette') {
+      flex: 1;
+      flex-direction: row;
+      justify-content: space-around;
+    }
 
     &-item {
       color: $white;
