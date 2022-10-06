@@ -62,6 +62,7 @@
   }
 
   &__item {
+    @include delay;
     background-color: white;
     border-radius: $border-radius;
     @include shadow;

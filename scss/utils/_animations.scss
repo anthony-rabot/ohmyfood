@@ -17,3 +17,18 @@
     transform: rotate(360deg);
   }
 }
+
+// Opacity et sur la fin translateY
+@keyframes menu-display-effect {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  70% {
+    opacity: .3;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

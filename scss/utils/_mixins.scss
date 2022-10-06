@@ -51,18 +51,14 @@
 }
 
 @mixin is($breakpoint) {
-  // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
   }
 
-    // If the key doesn't exist in the map
   @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    @warn "Don't find this breakpoint in map: `#{$breakpoint}`. ";
   }
 }
 
@@ -74,4 +70,17 @@
 
 @mixin rotate {
   animation: rotate 300ms linear 100ms 1;
+}
+
+@mixin delay {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: calc($menu-item-delay * 0.5 * $i);
+      animation-name: menu-display-effect;
+      animation-duration: 400ms;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+    }
+  }
 }
