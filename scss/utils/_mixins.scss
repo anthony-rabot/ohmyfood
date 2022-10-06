@@ -65,3 +65,9 @@
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
