@@ -434,6 +434,14 @@ a {
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
+.menu__item:nth-child(4) {
+  animation-delay: 200ms;
+  animation-name: menu-display-effect;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
 .menu__item:hover, .menu__item:active, .menu__item:focus {
   box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.3);
 }

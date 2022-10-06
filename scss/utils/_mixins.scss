@@ -73,7 +73,7 @@
 }
 
 @mixin delay {
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
       animation-delay: calc($menu-item-delay * 0.5 * $i);
       animation-name: menu-display-effect;
