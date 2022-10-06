@@ -7,6 +7,14 @@
     opacity: 1;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -22,16 +30,26 @@ body {
   }
 }
 
-h1 {
-  font-family: "Shrikhand", Helvetica Neue, Helvetica, Arial, cursive;
+a {
+  text-decoration: none;
 }
 
 .header {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 200;
+}
+.header__content {
+  position: relative;
+}
+.header__arrow {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
 }
 .header__title {
   margin: 0;
@@ -58,9 +76,14 @@ h1 {
   height: 1.8rem;
   color: #828282;
   position: relative;
+  margin-right: 1rem;
 }
 .page-title__heart i {
   position: absolute;
+}
+
+.home-link {
+  color: #000;
 }
 
 .footer-wrapper {
@@ -323,6 +346,17 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 992px) {
+  .carte-restaurant {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .carte-restaurant {
+    gap: 2rem;
+  }
+}
 .carte-restaurant__item {
   flex: 1;
 }
@@ -349,6 +383,11 @@ h1 {
   gap: 1rem;
   margin: 1rem 0;
 }
+@media (min-width: 1200px) {
+  .menu {
+    gap: 1.5rem;
+  }
+}
 .menu__item {
   background-color: white;
   border-radius: 1.2rem;
@@ -363,6 +402,9 @@ h1 {
 }
 .menu__item:hover > .menu__item-check, .menu__item:active > .menu__item-check, .menu__item:focus > .menu__item-check {
   margin-right: 0;
+}
+.menu__item:hover > .menu__item-check i, .menu__item:active > .menu__item-check i, .menu__item:focus > .menu__item-check i {
+  animation: rotate 300ms linear 100ms 1;
 }
 .menu__item-content {
   flex: 5;
@@ -390,8 +432,14 @@ h1 {
   flex: 1;
   display: flex;
   align-items: end;
-  padding: 1rem 0;
+  justify-content: end;
+  padding: 1rem;
   font-weight: 700;
+}
+@media (min-width: 992px) {
+  .menu__item-price {
+    padding-left: 0;
+  }
 }
 .menu__item-check {
   display: flex;
@@ -437,7 +485,7 @@ h1 {
 }
 
 .btn, .restaurant-btn {
-  padding: 1rem;
+  padding: 1rem 3rem;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -472,7 +520,6 @@ h1 {
 .restaurant-btn {
   display: block;
   margin: 1rem auto;
-  padding: 1rem 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

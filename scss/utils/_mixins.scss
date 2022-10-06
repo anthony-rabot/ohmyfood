@@ -71,3 +71,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+@mixin rotate {
+  animation: rotate 300ms linear 100ms 1;
+}

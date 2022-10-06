@@ -1,5 +1,5 @@
 .btn {
-  padding: $global-spacing;
+  padding: $global-spacing calc($global-spacing * 3);
   border: none;
   color: $white;
   cursor: pointer;
@@ -11,5 +11,4 @@
   @extend .btn;
   display: block;
   margin: $global-spacing auto;
-  padding: $global-spacing calc($global-spacing * 3);
 }
