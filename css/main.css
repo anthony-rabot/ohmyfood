@@ -118,38 +118,6 @@ h1 {
 .hero__content {
   font-weight: 300;
 }
-.hero__btn {
-  padding: 1rem;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 2.4rem;
-  background-size: 100%;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  position: relative;
-  z-index: 100;
-  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.15);
-}
-.hero__btn:before {
-  border-radius: 2.4rem;
-  background-image: linear-gradient(#ff93e1, #a16be0);
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  z-index: -100;
-  transition: opacity 250ms;
-}
-.hero__btn:hover:before, .hero__btn:active:before, .hero__btn:focus:before {
-  opacity: 1;
-}
-.hero__btn:hover, .hero__btn:active, .hero__btn:focus {
-  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.3);
-}
 .hero--image-only {
   display: flex;
 }
@@ -342,6 +310,7 @@ h1 {
 .main-content--grey {
   background-color: #f6f6f6;
   border-radius: 2.4rem 2.4rem 0 0;
+  padding-bottom: 2rem;
 }
 .main-content--over-image {
   margin-top: -5rem;
@@ -356,6 +325,8 @@ h1 {
 }
 .carte-restaurant__item {
   flex: 1;
+}
+.carte-restaurant__item:not(:last-child) {
   margin-bottom: 1rem;
 }
 .carte-restaurant__item-title {
@@ -385,9 +356,13 @@ h1 {
   display: flex;
   align-items: stretch;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu__item:hover, .menu__item:active, .menu__item:focus {
   box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.3);
+}
+.menu__item:hover > .menu__item-check, .menu__item:active > .menu__item-check, .menu__item:focus > .menu__item-check {
+  margin-right: 0;
 }
 .menu__item-content {
   flex: 5;
@@ -424,6 +399,8 @@ h1 {
   justify-content: center;
   flex: 0 1 4.5rem;
   background-color: #99E2D0;
+  margin-right: -4.5rem;
+  transition-duration: 500ms;
 }
 .menu__item-check-circle {
   background-color: #fff;
@@ -457,6 +434,45 @@ h1 {
   animation-duration: 300ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.btn, .restaurant-btn {
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2.4rem;
+  background-size: 100%;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  position: relative;
+  z-index: 100;
+  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.15);
+}
+.btn:before, .restaurant-btn:before {
+  border-radius: 2.4rem;
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 250ms;
+}
+.btn:hover:before, .restaurant-btn:hover:before, .btn:active:before, .restaurant-btn:active:before, .btn:focus:before, .restaurant-btn:focus:before {
+  opacity: 1;
+}
+.btn:hover, .restaurant-btn:hover, .btn:active, .restaurant-btn:active, .btn:focus, .restaurant-btn:focus {
+  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.restaurant-btn {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

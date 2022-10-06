@@ -3,6 +3,7 @@
   &--grey {
     background-color: map-get($ohmyfood-theme, light-gray);
     border-radius: calc($border-radius * 2) calc($border-radius * 2) 0 0;
+    padding-bottom: calc($global-spacing *2);
   }
 
   &--over-image {
@@ -19,7 +20,10 @@
 
   &__item {
   flex: 1;
-  margin-bottom: $global-spacing;
+
+    &:not(:last-child) {
+      margin-bottom: $global-spacing;
+    }
 
     &-title {
       font-size: 1.2rem;
@@ -51,6 +55,13 @@
     display: flex;
     align-items: stretch;
     overflow: hidden;
+    cursor: pointer;
+
+    &:hover > &-check,
+    &:active > &-check,
+    &:focus > &-check {
+      margin-right: 0;
+    }
 
     &-content {
       flex: 5;
@@ -87,6 +98,8 @@
       justify-content: center;
       flex: 0 1 4.5rem;
       background-color: map-get($ohmyfood-theme, tertiary);
+      margin-right: -4.5rem;
+      transition-duration: 500ms;
 
       &-circle {
         background-color: $white;

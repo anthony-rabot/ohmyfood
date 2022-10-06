@@ -1,0 +1,15 @@
+.btn {
+  padding: $global-spacing;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  @include btn-animation(map-get($ohmyfood-theme, secondary), map-get($ohmyfood-theme, primary), 250ms);
+  @include shadow;
+}
+
+.restaurant-btn {
+  @extend .btn;
+  display: block;
+  margin: $global-spacing auto;
+  padding: $global-spacing calc($global-spacing * 3);
+}
