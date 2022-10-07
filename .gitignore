@@ -6,3 +6,7 @@ dist
 .cache
 .idea
 *.map
+.editorconfig
+package-lock.json
+robots.txt
+
