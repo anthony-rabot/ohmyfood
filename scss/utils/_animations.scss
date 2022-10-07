@@ -18,7 +18,6 @@
   }
 }
 
-// Opacity et sur la fin translateY
 @keyframes menu-display-effect {
   from {
     opacity: 0;
@@ -30,5 +29,33 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes overlay {
+  from {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+  70% {
+    opacity: .9;
+  }
+  99% {
+    z-index: 1000;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
