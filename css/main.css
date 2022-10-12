@@ -108,6 +108,7 @@ a {
 .page-title__title {
   flex: 1;
   margin: 0.5rem 0;
+  font-family: "Shrikhand", Helvetica Neue, Helvetica, Arial, cursive;
 }
 .page-title__heart {
   font-size: 1.8rem;

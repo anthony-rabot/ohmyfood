@@ -39,6 +39,7 @@
   &__title {
     flex: 1;
     margin: calc($global-spacing / 2) 0;
+    font-family: $title-font-family;
   }
 
   &__heart {
